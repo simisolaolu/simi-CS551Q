@@ -1,15 +1,18 @@
-## 🚀 Features
+##MOVIE EXPLORER DJANGO PROJECT - SETUP GUIDE
 
-- 📄 Movie list and detail pages  
-- 🔍 Search and filtering  
-- 👤 User registration & login  
-- ❤️ Add to favourites  
-- 🧪 Automated tests  
-- 🗄️ Relational database (Movie ↔ Genre)
+---
+## Project features
+
+- Movie list and detail pages  
+- Search and filtering  
+- User registration & login  
+- Add to favourites  
+- Automated tests  
+- Relational database (Movie ↔ Genre)
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 - Python  
 - Django  
@@ -17,7 +20,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 movie_explorer/
@@ -30,7 +33,7 @@ movie_explorer/
 
 ---
 
-## ⚙️ Setup (Local Development)
+## Setup (Local Development)
 
 ### 1. Clone or Extract
 ```bash
@@ -74,7 +77,7 @@ Open:
 
 ---
 
-## ☁️ Deployment (Render)
+## Deployment (Render)
 
 ### 1. Prepare Project
 ```bash
@@ -114,7 +117,7 @@ gunicorn movie_explorer.wsgi
 
 ---
 
-## 🧪 Tests
+## Tests
 
 Run tests:
 ```bash
@@ -128,7 +131,7 @@ Includes:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 > Add screenshots here before submission for higher marks
 
@@ -140,14 +143,14 @@ Includes:
 
 ---
 
-## 📄 Documentation
+## Documentation
 
 - README (this file)  
 - 1-page report (PDF)  
 
 ---
 
-## ✅ Assignment Criteria Covered
+## Assignment Criteria Covered
 
 ✔ Database models (2+ related tables)  
 ✔ Open dataset ready  
@@ -160,13 +163,13 @@ Includes:
 
 ---
 
-## 👨‍💻 Author
-
+## Author
+Simisola
 Student Project – Enterprise Software Development  
 Generated: 2026-04-07
 
 ---
 
-## 📜 License
+## License
 
 This project is for academic use.
