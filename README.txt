@@ -20,146 +20,95 @@
 
 ---
 
-## Project Structure
-
-```
-movie_explorer/
-├── movies/
-├── users/
-├── templates/
-├── manage.py
-└── movie_explorer/
-```
-
+## Deploy locally
 ---
 
-## Setup (Local Development)
+1. Install Python (3.10+) and pip
 
-### 1. Clone or Extract
-```bash
+2. Extract project:
 unzip movie_explorer.zip
 cd movie_explorer
-```
 
-### 2. Create Virtual Environment
-```bash
-python -m venv venv
-```
+3. Create virtual environment:
+python -m venv env
 
 Activate:
-- Windows: `venv\Scripts\activate`
-- Mac/Linux: `source venv/bin/activate`
+Windows: venv\Scripts\activate
+Mac/Linux: source env/bin/activate
 
-### 3. Install Dependencies
-```bash
+4. Install Django:
 pip install django
-```
 
-### 4. Run Migrations
-```bash
+5. Run migrations:
 python manage.py makemigrations
+python manage.py makemigrations movies
 python manage.py migrate
-```
 
-### 5. Create Superuser
-```bash
+6. Create admin user:
 python manage.py createsuperuser
-```
+superuser: simi
+email: simiolu@gmail.com
+password: simi
 
-### 6. Run Server
-```bash
+7. Run server:
 python manage.py runserver
-```
 
-Open:
-- App → http://127.0.0.1:8000/
-- Admin → http://127.0.0.1:8000/admin/
+Open browser:
+http://127.0.0.1:8000/
 
+Admin:
+http://127.0.0.1:8000/admin/
+
+Add Genres and Movies.
+
+
+Importing Movies from Dataset
+MovieLense is has sample dataset for 
+Download the least file that has a bout 500 records
+====================================================
+1. I had to use pandas to trip the csv file from MobieLense to 500 records only.
+2. I install pandas using PIP INSTALL PANDAS 
+3. Imported csv file into movies tables
+
+
+
+## Deploy on Github
 ---
 
-## Deployment (Render)
+1. Push to GitHub:
+2. git init
+3. git add .
+4. git commit -m "Initial commit"
+5. git log --date=local --pretty=format:"%h%x09%an%x09%ad%x09%s" > commits.local.tsv.txt
+6. git branch -M main
+7. git remote add origin https://github.com/simisolaolu/simi-CS551Q.git
+8. git push -u origin main
 
-### 1. Prepare Project
-```bash
-pip freeze > requirements.txt
-pip install gunicorn
-pip freeze > requirements.txt
-```
 
-Create `Procfile`:
-```
-web: gunicorn movie_explorer.wsgi
-```
 
-Update `settings.py`:
-```python
-ALLOWED_HOSTS = ['*']
-STATIC_ROOT = 'staticfiles'
-```
+6. Deploy on Render:
+- Create account
+- New Web Service
+- Connect repo
 
----
-
-### 2. Deploy Steps
-
-1. Push to GitHub  
-2. Create account on Render  
-3. New Web Service → connect repo  
-
-**Build Command**
-```bash
+Build Command:
 pip install -r requirements.txt
-```
 
-**Start Command**
-```bash
+Start Command:
 gunicorn movie_explorer.wsgi
-```
 
----
+7. Run:
+python manage.py migrate
+python manage.py createsuperuser
 
-## Tests
 
-Run tests:
-```bash
-python manage.py test
-```
+8. App is now live.
 
-Includes:
-- Model test  
-- View test  
-- Detail page test  
-
----
-
-## Screenshots
-
-> Add screenshots here before submission for higher marks
-
-```
-/screenshots/home.png
-/screenshots/detail.png
-/screenshots/login.png
-```
-
----
 
 ## Documentation
 
 - README (this file)  
 - 1-page report (PDF)  
-
----
-
-## Assignment Criteria Covered
-
-✔ Database models (2+ related tables)  
-✔ Open dataset ready  
-✔ List + detail pages  
-✔ Authentication + interaction  
-✔ Search/filter  
-✔ Validation & structure  
-✔ Tests  
-✔ Documentation  
 
 ---
 
